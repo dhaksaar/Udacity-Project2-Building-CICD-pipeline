@@ -52,7 +52,47 @@ Output from make all :
 ![image](https://user-images.githubusercontent.com/24310615/122688545-c454c200-d214-11eb-809c-1c8d6084cd84.png)
 
 
+### Continuous Delivery using Azure Pipelines
 
+* Architecture Diagram
+![image](https://user-images.githubusercontent.com/24310615/122688774-219d4300-d216-11eb-97f8-31ffaface356.png)
+
+
+* Step 1: Deploy the App in Azure App Service 
+Replace <<app service name>> with the preferred name of the application. It should be unique 
+```sh
+az webapp up -n <<app service name>>  --sku B1
+```
+
+ Output 
+ ![image](https://user-images.githubusercontent.com/24310615/122690273-6ded8080-d220-11eb-9f57-2b9708c77b3a.png)
+
+ Resource group: 
+ ![image](https://user-images.githubusercontent.com/24310615/122690298-95444d80-d220-11eb-8d04-8087573903b7.png)
+
+ 
+ 
+* Step 2: 
+ 
+Service Connection 
+ ![image](https://user-images.githubusercontent.com/24310615/122690247-50201b80-d220-11eb-8d13-38ac2d19007c.png)
+
+ ![image](https://user-images.githubusercontent.com/24310615/122690328-cde42700-d220-11eb-9197-0e82582a597f.png)
+
+ ![image](https://user-images.githubusercontent.com/24310615/122690371-14d21c80-d221-11eb-99b5-4414dc5daef7.png)
+
+ Creating pipeline
+
+ ![image](https://user-images.githubusercontent.com/24310615/122690420-667aa700-d221-11eb-9b84-321d98769513.png)
+
+ ![image](https://user-images.githubusercontent.com/24310615/122690433-7befd100-d221-11eb-82e1-d55eee76d09c.png)
+
+ 
+ ![image](https://user-images.githubusercontent.com/24310615/122690572-40093b80-d222-11eb-84f6-67e314d39c92.png)
+
+ Output  : 
+ 
+ 
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
