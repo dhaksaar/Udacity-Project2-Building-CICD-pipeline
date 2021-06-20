@@ -1,12 +1,15 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+In this project, you will build a Github repository from scratch and create a scaffolding that will assist you in performing both Continuous Integration and Continuous Delivery. You'll use Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle. Next, you'll integrate this project with Azure Pipelines to enable Continuous Delivery to Azure App Service.
+
+![image](https://user-images.githubusercontent.com/24310615/122680602-e7b54800-d1e7-11eb-8db4-f54256ba388a.png)
+
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+
+* Link to the Trello board for the project https://trello.com/b/aZvUh4wL/udacity-devops-azure-project-2
+* Link to a spreadsheet that includes the original and final project plan https://docs.google.com/spreadsheets/d/1zAT2ziUFgRhUltKSPn2ulCKt6H7PDlzjHTGCNyTsp6g/edit?usp=sharing
 
 ## Instructions
 
