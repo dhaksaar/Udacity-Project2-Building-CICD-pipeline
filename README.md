@@ -13,8 +13,46 @@ In this project, you will build a Github repository from scratch and create a sc
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+### Continuous Integration with GitHub Actions
+
+* Architectural Diagram 
+
+![image](https://user-images.githubusercontent.com/24310615/122688100-3081f680-d212-11eb-8610-bd79283d5d91.png)
+
+* Enter to Azure Portal with your account and open a Azure Cloud shell ( use Bash)
+
+* Step1 : Set up SSH Keys in your Azure Cloud Shell and add the id_rsa.pub key to your GitHub repo ( ssh keys) 
+
+```sh
+ssh-keygen -t rsa
+ cat ~/.ssh/id_rsa.pub
+```
+
+* Step 2: Clone the repo in Azure Cloud Shell
+* Step 3: Create a virtual environment for the application.
+
+```sh
+python3 -m venv ~/.myapp
+source ~/.myapp/bin/activate
+```
+
+* Step 4: Run `make all` which will install, lint, and test code
+
+```sh
+make all
+```
+
+Output from make all :
+![image](https://user-images.githubusercontent.com/24310615/122688443-18ab7200-d214-11eb-9dab-850105348694.png)
+
+* Step 5: GitHub Actions
+  Modify the .github/workflows/pythonapp.yml either through GitHub or through Azure cloud shell editor (vim) , just add a new line or a space in the end of the file and commit
+  This would trigger the GitHub action
+  Output
+![image](https://user-images.githubusercontent.com/24310615/122688545-c454c200-d214-11eb-809c-1c8d6084cd84.png)
+
+
+
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
