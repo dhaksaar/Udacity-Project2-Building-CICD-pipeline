@@ -8,16 +8,16 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '9cb9e4f4-d7f5-46a1-b07e-e48546fd75a8'
+  azureServiceConnectionId: '465f3976-91bc-44da-ab9a-b6e2170ad69b'
 
   # Web app name
-  webAppName: 'DaxinCorpAzureML'
+  webAppName: 'daxinUdacityProj'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'DaxinCorpAzureML'
+  environmentName: 'daxinUdacityProj'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : DaxinCorpAzureML'
+            displayName: 'Deploy Azure Web App : daxinUdacityProj'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
