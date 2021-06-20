@@ -132,19 +132,6 @@ View the logs using the below url. Replace <app-name> with the Deployed Applicat
  
  ![image](https://user-images.githubusercontent.com/24310615/122691072-303f2680-d225-11eb-9767-060a376e6769.png)
 
- 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
-* Project running on Azure App Service
-
-* Project cloned into Azure Cloud Shell
-
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-
-
 
 ## Enhancements
 * Add few more prediction models
