@@ -58,13 +58,13 @@ Output from make all :
 ![image](https://user-images.githubusercontent.com/24310615/122688774-219d4300-d216-11eb-97f8-31ffaface356.png)
 
 
-* Step 1: Deploy the App in Azure App Service 
-Replace <<app service name>> with the preferred name of the application. It should be unique 
+* Deploy the App in Azure App Service 
+Replace <app-name> with the preferred name of the application. It should be unique 
 ```sh
-az webapp up -n <<app service name>>  --sku B1
+az webapp up -n <app-name>  --sku B1
 ```
 
- Output 
+ Output : 
  ![image](https://user-images.githubusercontent.com/24310615/122690273-6ded8080-d220-11eb-9f57-2b9708c77b3a.png)
 
  Resource group: 
@@ -72,28 +72,67 @@ az webapp up -n <<app service name>>  --sku B1
 
  
  
-* Step 2: 
- 
-Service Connection 
+
+ * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+
+ * Creation of Service Connection 
+   Open the Azure DevOps project(create one if its not available)
+   Navigate to Project Setting-> Service Connections -> Create a new Connection
  ![image](https://user-images.githubusercontent.com/24310615/122690247-50201b80-d220-11eb-8d13-38ac2d19007c.png)
 
+  Choose Azure Resource Manager 
+ 
  ![image](https://user-images.githubusercontent.com/24310615/122690328-cde42700-d220-11eb-9197-0e82582a597f.png)
 
+ 
+  Provide authentication when prompted, Select the Subscription, Web App name  and Save
+ 
  ![image](https://user-images.githubusercontent.com/24310615/122690371-14d21c80-d221-11eb-99b5-4414dc5daef7.png)
 
- Creating pipeline
+ * Creating pipeline
 
+  Navigate to Pipeline -> Create a new Pipeline and Choose GitHub
+ 
  ![image](https://user-images.githubusercontent.com/24310615/122690420-667aa700-d221-11eb-9b84-321d98769513.png)
-
+ 
+ 
+ 
+ Select the Repo containing the application code
+ 
  ![image](https://user-images.githubusercontent.com/24310615/122690433-7befd100-d221-11eb-82e1-d55eee76d09c.png)
 
- 
+
+ * Running Azure App Service from Azure Pipelines automatic deployment
+
+  Configure the yml file, update the Service Connection id and the Web App name and Save the file
  ![image](https://user-images.githubusercontent.com/24310615/122690572-40093b80-d222-11eb-84f6-67e314d39c92.png)
 
- Output  : 
  
- 
+ ![image](https://user-images.githubusercontent.com/24310615/122690849-b490aa00-d223-11eb-8519-34a99d2c300d.png)
 
+ 
+ 
+* Successful prediction from deployed flask app in Azure Cloud Shell.
+
+Modify the make_predict_azure_app.sh to connect to the App Service and execute the below command
+![image](https://user-images.githubusercontent.com/24310615/122691032-f53cf300-d224-11eb-9287-25897a32a061.png)
+ 
+ ```bash
+udacity@Azure:~$ ./make_predict_azure_app.sh
+```
+Output : 
+ ![image](https://user-images.githubusercontent.com/24310615/122690995-c7f04500-d224-11eb-97df-7fed29dd11a8.png)
+
+* Output of streamed log files from deployed application
+
+View the logs using the below url. Replace <app-name> with the Deployed Application name
+```sh
+ https://<app-name>.scm.azurewebsites.net/api/logs/docker
+```
+ 
+ ![image](https://user-images.githubusercontent.com/24310615/122691072-303f2680-d225-11eb-9767-060a376e6769.png)
+
+ 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Project running on Azure App Service
@@ -104,29 +143,13 @@ Service Connection
 
 * Output of a test run
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
-* Running Azure App Service from Azure Pipelines automatic deployment
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
-
-* Output of streamed log files from deployed application
-
-> 
 
 ## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
-
+* Add few more prediction models
+* Build User interface for API
+       
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
 
 
