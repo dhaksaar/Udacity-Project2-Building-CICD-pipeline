@@ -132,7 +132,20 @@ View the logs using the below url. Replace <app-name> with the Deployed Applicat
  
  ![image](https://user-images.githubusercontent.com/24310615/122691072-303f2680-d225-11eb-9767-060a376e6769.png)
 
+Streaming logs
+ 
+ Logs can be stream using the command
+ 
+ ```sh
+ az webapp log tail
+ ```
 
+ Start streaming the log and make a predict call from another terminal
+
+ Output:
+ ![image](https://user-images.githubusercontent.com/24310615/122691532-23700200-d228-11eb-89c2-ff69056e82bb.png)
+
+ 
 ## Enhancements
 * Add few more prediction models
 * Build User interface for API
