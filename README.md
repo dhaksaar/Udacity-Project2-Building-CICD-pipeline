@@ -161,6 +161,17 @@ Streaming logs
  Output:
  ![image](https://user-images.githubusercontent.com/24310615/122691532-23700200-d228-11eb-89c2-ff69056e82bb.png)
 
+* Locust 
+
+ Execute the command 
+```sh
+locust -f locustfile.py --host https://<app-name>.azurewebsites.net/ --users 200 --spawn-rate 5
+ ```
+
+ Open the browser and go to web address http://localhost:8089
+ Output
+ ![image](https://user-images.githubusercontent.com/24310615/122894179-dfbbec00-d33e-11eb-8af6-a5ee5dadc740.png)
+
  
 ## Enhancements
 * Add few more prediction models
