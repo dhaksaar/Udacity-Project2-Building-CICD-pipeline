@@ -25,3 +25,5 @@ az webapp up -n <app-name>  --sku B1
 #To Stream the log 
 az webapp log tail
 
+# Locust load test
+locust -f locustfile.py --host https://<app-name>.azurewebsites.net/ --users 200 --spawn-rate 5
