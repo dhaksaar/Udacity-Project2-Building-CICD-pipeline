@@ -108,6 +108,13 @@ az webapp up -n <app-name>  --sku B1
  ![image](https://user-images.githubusercontent.com/24310615/122690572-40093b80-d222-11eb-84f6-67e314d39c92.png)
 
  
+ * Output of build Job: 
+
+ ![image](https://user-images.githubusercontent.com/24310615/122866643-349c3a00-d320-11eb-9fa7-b955c0056a1e.png)
+
+ 
+ * Output of Deployment Job: 
+  
  ![image](https://user-images.githubusercontent.com/24310615/122690849-b490aa00-d223-11eb-8519-34a99d2c300d.png)
 
  
