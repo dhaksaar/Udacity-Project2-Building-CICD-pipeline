@@ -29,6 +29,13 @@ ssh-keygen -t rsa
 ```
 
 * Step 2: Clone the repo in Azure Cloud Shell
+```sh
+git clone git@github.com:dhaksaar/Udacity-Project2-Building-CICD-pipeline.git
+```
+
+![image](https://user-images.githubusercontent.com/24310615/122867844-0cadd600-d322-11eb-9f8d-0980d7780809.png)
+
+
 * Step 3: Create a virtual environment for the application.
 
 ```sh
