@@ -166,6 +166,7 @@ Streaming logs
 * Include performance testing in the CI/CD pipeline
 * Include smoke test once the code is deployed in production
 * Include Log analytics using Azure monitor
+* Deploy on Kubernettes cluster
        
 ## Demo 
 
